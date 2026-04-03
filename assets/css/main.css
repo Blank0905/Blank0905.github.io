@@ -860,27 +860,7 @@ section,
   color: rgba(255, 255, 255, 0.8);
 }
 
-.portfolio .portfolio-content .portfolio-info .preview-link,
-.portfolio .portfolio-content .portfolio-info .details-link {
-  position: absolute;
-  left: calc(50% - 40px);
-  font-size: 26px;
-  top: calc(50% - 14px);
-  color: #fff;
-  transition: 0.3s;
-  line-height: 1.2;
-}
 
-.portfolio .portfolio-content .portfolio-info .preview-link:hover,
-.portfolio .portfolio-content .portfolio-info .details-link:hover {
-  color: var(--accent-color);
-}
-
-.portfolio .portfolio-content .portfolio-info .details-link {
-  left: 50%;
-  font-size: 34px;
-  line-height: 0;
-}
 
 .portfolio .portfolio-content:hover .portfolio-info {
   opacity: 1;
@@ -1272,4 +1252,107 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+/* 統一作品集圖片高度與縮放方式 */
+.portfolio-item img {
+  width: 100%;
+  height: 300px !important; /* 強制高度 */
+  object-fit: cover;        /* 防止變形 */
+  display: block;
+}
+
+/* 調整文字區塊的位置，讓它稍微往上移一點 */
+.portfolio .portfolio-content .portfolio-info h4 {
+  font-size: 18px; /* 稍微加大文字 */
+  padding: 8px 15px;
+  display: block; /* 讓它寬度佔滿，方便點擊 */
+  text-align: center;
+}
+
+.portfolio .portfolio-content .portfolio-info p {
+  bottom: 20px; /* 調整下方文字距離 */
+}
+
+/* 移除 Members 標題的連結樣式 */
+.service-item .title {
+  pointer-events: none; /* 徹底禁用標題點擊 */
+}
+
+.service-item:hover .title {
+  color: var(--heading-color); /* 確保滑鼠移上去標題不會變色 */
+}
+
+.service-item .description strong {
+  color: var(--accent-color); /* 讓「定位」等標籤顯示主題藍色，增加設計感 */
+}
+
+/* --- Members 區塊專屬調優 --- */
+
+/* 圖片設定：固定大小並維持比例 */
+.member-img {
+  width: 150px !important;  /* 增加圖片寬度 */
+  height: 150px !important; /* 增加圖片高度 */
+  border-radius: 15px;      /* 稍微圓角，或改 50% 變正圓 */
+  object-fit: cover;
+  margin-right: 25px;
+  border: 4px solid var(--accent-color);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* 姓名標題放大 */
+.member-info .title {
+  font-size: 32px !important; 
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--heading-color);
+  cursor: default;
+}
+
+/* 內文描述放大 */
+.member-info .description {
+  font-size: 18px !important;
+  line-height: 1.8;
+  color: #333;
+}
+
+/* 「定位」與「特點」加粗標籤放大 */
+.member-info .description strong {
+  font-size: 20px;
+  color: var(--accent-color);
+}
+
+/* 針對行動裝置縮小一點點圖片，避免擠壓 */
+@media (max-width: 768px) {
+  .member-img {
+    width: 100px !important;
+    height: 100px !important;
+    margin-right: 15px;
+  }
+  .member-info .title {
+    font-size: 24px !important;
+  }
+}
+
+/* --- Members 區塊深度優化 (撐空間版) --- */
+
+
+/* 3. 拉開文字行高，讓內文佔據更多垂直空間 */
+.member-info .description {
+  font-size: 19px !important;
+  line-height: 2.2 !important; /* 增加行距，讓文字區塊變高 */
+  margin-top: 15px;
+}
+
+/* 4. 姓名與描述之間的距離 */
+.member-info .title {
+  margin-bottom: 25px !important;
+}
+
+/* 5. 標籤樣式 (增加厚度) */
+.member-tags .badge {
+  padding: 10px 15px;
+  font-size: 14px;
+  margin-right: 8px;
+  margin-top: 10px;
+  display: inline-block;
 }
