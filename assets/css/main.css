@@ -12,29 +12,41 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Raleway",  sans-serif;
-  --nav-font: "Poppins",  sans-serif;
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway", sans-serif;
+  --nav-font: "Poppins", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #272829; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #050d18; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #149ddd; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+:root {
+  --background-color: #ffffff;
+  /* Background color for the entire website, including individual sections */
+  --default-color: #272829;
+  /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #050d18;
+  /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #149ddd;
+  /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #ffffff;
+  /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff;
+  /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #a8a9b4;  /* The default color of the main navmenu links */
-  --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #040b14; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #040b14; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #a8a9b4; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #ffffff; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: #a8a9b4;
+  /* The default color of the main navmenu links */
+  --nav-hover-color: #ffffff;
+  /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #040b14;
+  /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #040b14;
+  /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #a8a9b4;
+  /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #ffffff;
+  /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -1250,58 +1262,68 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
-}
+/* Add your styles here */
+
 /* 統一作品集圖片高度與縮放方式 */
 .portfolio-item img {
   width: 100%;
-  height: 300px !important; /* 強制高度 */
-  object-fit: cover;        /* 防止變形 */
+  height: 300px !important;
+  /* 強制高度 */
+  object-fit: cover;
+  /* 防止變形 */
   display: block;
 }
 
 /* 調整文字區塊的位置，讓它稍微往上移一點 */
 .portfolio .portfolio-content .portfolio-info h4 {
-  font-size: 18px; /* 稍微加大文字 */
+  font-size: 18px;
+  /* 稍微加大文字 */
   padding: 8px 15px;
-  display: block; /* 讓它寬度佔滿，方便點擊 */
+  display: block;
+  /* 讓它寬度佔滿，方便點擊 */
   text-align: center;
 }
 
 .portfolio .portfolio-content .portfolio-info p {
-  bottom: 20px; /* 調整下方文字距離 */
+  bottom: 20px;
+  /* 調整下方文字距離 */
 }
 
 /* 移除 Members 標題的連結樣式 */
 .service-item .title {
-  pointer-events: none; /* 徹底禁用標題點擊 */
+  pointer-events: none;
+  /* 徹底禁用標題點擊 */
 }
 
 .service-item:hover .title {
-  color: var(--heading-color); /* 確保滑鼠移上去標題不會變色 */
+  color: var(--heading-color);
+  /* 確保滑鼠移上去標題不會變色 */
 }
 
 .service-item .description strong {
-  color: var(--accent-color); /* 讓「定位」等標籤顯示主題藍色，增加設計感 */
+  color: var(--accent-color);
+  /* 讓「定位」等標籤顯示主題藍色，增加設計感 */
 }
 
 /* --- Members 區塊專屬調優 --- */
 
 /* 圖片設定：固定大小並維持比例 */
 .member-img {
-  width: 150px !important;  /* 增加圖片寬度 */
-  height: 150px !important; /* 增加圖片高度 */
-  border-radius: 15px;      /* 稍微圓角，或改 50% 變正圓 */
+  width: 150px !important;
+  /* 增加圖片寬度 */
+  height: 150px !important;
+  /* 增加圖片高度 */
+  border-radius: 15px;
+  /* 稍微圓角，或改 50% 變正圓 */
   object-fit: cover;
   margin-right: 25px;
   border: 4px solid var(--accent-color);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* 姓名標題放大 */
 .member-info .title {
-  font-size: 32px !important; 
+  font-size: 32px !important;
   font-weight: 700;
   margin-bottom: 12px;
   color: var(--heading-color);
@@ -1328,6 +1350,7 @@ section,
     height: 100px !important;
     margin-right: 15px;
   }
+
   .member-info .title {
     font-size: 24px !important;
   }
@@ -1339,7 +1362,8 @@ section,
 /* 3. 拉開文字行高，讓內文佔據更多垂直空間 */
 .member-info .description {
   font-size: 19px !important;
-  line-height: 2.2 !important; /* 增加行距，讓文字區塊變高 */
+  line-height: 2.2 !important;
+  /* 增加行距，讓文字區塊變高 */
   margin-top: 15px;
 }
 
